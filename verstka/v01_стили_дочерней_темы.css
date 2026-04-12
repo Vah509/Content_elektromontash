@@ -1,0 +1,45 @@
+/*
+Theme Name: Kadence Child
+Template: kadence
+Version: 1.0
+Description: Кастомные стили для проекта elektromontazh.kiev.ua
+*/
+
+:root {
+  --kt-card-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  --kt-radius: 8px;
+  --kt-primary: #0d3b66;
+  --kt-accent: #f4a261;
+}
+
+/* Карточки преимуществ и кейсов */
+.card, .kt-blocks-info-box, .wp-block-kadence-rowlayout.card {
+  border-radius: var(--kt-radius) !important;
+  box-shadow: var(--kt-card-shadow) !important;
+  background: #ffffff !important;
+}
+
+/* Обертка формы */
+.form-wrap, .kt-form-wrap {
+  max-width: 640px !important;
+  margin: 2rem auto !important;
+  padding: 2rem !important;
+  border-radius: var(--kt-radius) !important;
+  box-shadow: var(--kt-card-shadow) !important;
+}
+
+/* Блок статистики */
+.stats {
+  background: var(--kt-accent) !important;
+  color: var(--kt-primary) !important;
+  padding: 2rem 0 !important;
+  text-align: center !important;
+}
+.stats h1, .stats h2, .stats h3 { color: var(--kt-primary) !important; margin-bottom: 0.25rem !important; }
+
+/* Адаптив формы */
+@media (max-width: 768px) {
+  .kt-form-wrap, .form-wrap { padding: 1.25rem !important; margin: 1.5rem 0.5rem !important; }
+  .kt-form-field input, .kt-form-field textarea { font-size: 16px !important; padding: 12px !important; }
+  .kt-form-submit { width: 100% !important; padding: 16px 0 !important; }
+}
