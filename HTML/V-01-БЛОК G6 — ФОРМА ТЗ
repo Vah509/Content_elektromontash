@@ -1,0 +1,56 @@
+<!-- ============================================================
+     БЛОК G6 — ФОРМА ТЗ
+     Вставляється в Kadence → Custom HTML блок (або Row/Column)
+     Якір: #forma-tz  ← на нього посилається кнопка "Надіслати ТЗ" у шапці
+     і будь-яке посилання типу <a href="#forma-tz">...</a> на будь-якій сторінці
+============================================================ -->
+
+<div class="section-alt tz-section-wrap" id="forma-tz">
+  <div class="tz-form-grid">
+
+    <!-- ліва колонка: текст + контакти -->
+    <div class="form-info">
+      <p class="section-label">Зв'яжіться з нами</p>
+      <h2>Надішліть технічне завдання</h2>
+      <p class="form-info-lead">
+        Опишіть вашу задачу — ми розрахуємо вартість та строки протягом 1 робочого дня.
+      </p>
+      <div class="form-contacts">
+        <div class="form-contact-item">
+          <span class="fc-icon">📞</span>
+          <a href="tel:+380675097094">+38 (067) 509-70-94</a>
+        </div>
+        <div class="form-contact-item">
+          <span class="fc-icon">📧</span>
+          <a href="mailto:5033455@gmail.com">5033455@gmail.com</a>
+        </div>
+        <div class="form-contact-item">
+          <span class="fc-icon">📍</span>
+          <span class="form-contact-label">Київ, вул. Печенізька, 35/43, оф. 168</span>
+        </div>
+        <div class="form-contact-item">
+          <span class="fc-icon">🕐</span>
+          <span class="form-contact-label">Пн–Пт: 9:00–17:30</span>
+        </div>
+        <div class="form-contact-item">
+          <span class="fc-icon">💬</span>
+          <span class="form-contact-label">WhatsApp · Viber · Telegram</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- права колонка: форма Fluent Forms -->
+    <div class="tz-form-wrap">
+      <!--
+        Замініть "1" на реальний ID вашої форми у Fluent Forms.
+        Щоб дізнатись ID: Fluent Forms → ваша форма → в URL буде ?form_id=1
+        або наведіть на шорткод у списку форм.
+      -->
+      [forminator_form id="80"]
+      <p class="form-note">
+        Або зателефонуйте: <a href="tel:+380675097094">+38 (067) 509-70-94</a>
+      </p>
+    </div>
+
+  </div>
+</div>
