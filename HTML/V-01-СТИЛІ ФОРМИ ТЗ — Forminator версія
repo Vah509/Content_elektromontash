@@ -1,0 +1,319 @@
+/* ============================================================
+   СТИЛІ ФОРМИ ТЗ — Forminator версія
+   elektromontazh.kiev.ua
+   
+   Вставляти: WordPress → Зовнішній вигляд → Додатковий CSS
+============================================================ */
+
+
+/* ── Скол-відступ для якоря #forma-tz ── */
+#forma-tz {
+  scroll-margin-top: 80px;
+}
+
+
+/* ══════════════════════════════════════════
+   FORMINATOR — КОМПАКТНІ ВІДСТУПИ МІЖ ПОЛЯМИ
+══════════════════════════════════════════ */
+
+/* Основний контейнер форми */
+#forma-tz .forminator-custom-form,
+#forma-tz .forminator-ui {
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+/* Ряди полів — головний винуватець великих відступів */
+#forma-tz .forminator-row {
+  margin-bottom: 12px !important;
+  padding: 0 !important;
+}
+
+/* Останній ряд без відступу знизу */
+#forma-tz .forminator-row:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Колонки всередині рядів */
+#forma-tz .forminator-col {
+  padding: 0 !important;
+}
+
+/* Обгортка кожного поля */
+#forma-tz .forminator-field {
+  margin-bottom: 0 !important;
+  padding: 0 !important;
+}
+
+
+/* ══════════════════════════════════════════
+   ЛЕЙБЛИ
+══════════════════════════════════════════ */
+#forma-tz .forminator-label,
+#forma-tz label {
+  font-family: var(--ff-body, 'Manrope', sans-serif) !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  color: var(--c-muted, #6b7280) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  margin-bottom: 5px !important;
+  display: block !important;
+}
+
+
+/* ══════════════════════════════════════════
+   ПОЛЯ ВВОДУ: text, email, tel, textarea, select
+══════════════════════════════════════════ */
+#forma-tz input[type="text"],
+#forma-tz input[type="email"],
+#forma-tz input[type="tel"],
+#forma-tz input[type="number"],
+#forma-tz textarea,
+#forma-tz select,
+#forma-tz .forminator-input,
+#forma-tz .forminator-textarea,
+#forma-tz .forminator-select2 .select2-selection {
+  width: 100% !important;
+  background: var(--c-bg2, #f3f4f6) !important;
+  border: 1px solid var(--c-accent-border, #d1d5db) !important;
+  border-radius: var(--radius, 6px) !important;
+  padding: 10px 13px !important;
+  font-family: var(--ff-body, 'Manrope', sans-serif) !important;
+  font-size: 14px !important;
+  color: var(--c-head, #111827) !important;
+  outline: none !important;
+  box-shadow: none !important;
+  transition: border-color 0.2s ease !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  line-height: 1.4 !important;
+}
+
+/* Фокус */
+#forma-tz input:focus,
+#forma-tz textarea:focus,
+#forma-tz select:focus {
+  border-color: var(--c-accent, #16a34a) !important;
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.1) !important;
+  outline: none !important;
+}
+
+/* Placeholder */
+#forma-tz ::placeholder {
+  color: var(--c-muted, #9ca3af) !important;
+  opacity: 0.8 !important;
+}
+
+/* Textarea висота */
+#forma-tz textarea {
+  min-height: 90px !important;
+  resize: vertical !important;
+}
+
+/* Лічильник символів textarea (0/1000) — компактніше */
+#forma-tz .forminator-field--limit_count {
+  font-size: 11px !important;
+  color: var(--c-muted, #9ca3af) !important;
+  text-align: right !important;
+  margin-top: 3px !important;
+}
+
+
+/* ══════════════════════════════════════════
+   ПОЛЕ ТЕЛЕФОНУ — Forminator phone
+══════════════════════════════════════════ */
+#forma-tz .forminator-phone--intl {
+  width: 100% !important;
+}
+
+/* Прапорець і код країни */
+#forma-tz .iti {
+  width: 100% !important;
+}
+#forma-tz .iti__flag-container {
+  border-right: 1px solid var(--c-accent-border, #d1d5db) !important;
+}
+#forma-tz .iti input[type="tel"] {
+  padding-left: 52px !important;
+}
+
+
+/* ══════════════════════════════════════════
+   ЗАВАНТАЖЕННЯ ФАЙЛІВ
+══════════════════════════════════════════ */
+#forma-tz .forminator-upload-field-area {
+  border: 2px dashed var(--c-accent-border, #d1d5db) !important;
+  border-radius: var(--radius, 6px) !important;
+  padding: 16px !important;
+  background: var(--c-bg2, #f3f4f6) !important;
+  text-align: center !important;
+  transition: border-color 0.2s !important;
+}
+#forma-tz .forminator-upload-field-area:hover {
+  border-color: var(--c-accent, #16a34a) !important;
+}
+
+/* Дублюючий лейбл "Надіслати файл" над зоною — прибрати */
+#forma-tz .forminator-upload--title {
+  display: none !important;
+}
+
+
+/* ══════════════════════════════════════════
+   КНОПКА ВІДПРАВКИ
+══════════════════════════════════════════ */
+#forma-tz .forminator-btn-submit,
+#forma-tz button[type="submit"],
+#forma-tz input[type="submit"] {
+  background: var(--c-accent, #16a34a) !important;
+  color: #fff !important;
+  font-family: var(--ff, 'Geologica', sans-serif) !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+  padding: 13px 28px !important;
+  border: none !important;
+  border-radius: var(--radius, 6px) !important;
+  cursor: pointer !important;
+  transition: opacity 0.2s, transform 0.15s !important;
+  width: auto !important;
+  margin-top: 4px !important;
+}
+#forma-tz .forminator-btn-submit:hover {
+  opacity: 0.87 !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Ряд з кнопкою — відступ зверху */
+#forma-tz .forminator-row--submit {
+  margin-top: 4px !important;
+  margin-bottom: 0 !important;
+}
+
+
+/* ══════════════════════════════════════════
+   ПОВІДОМЛЕННЯ ПРО УСПІХ / ПОМИЛКИ
+══════════════════════════════════════════ */
+#forma-tz .forminator-response-output--success {
+  background: rgba(22, 163, 74, 0.08) !important;
+  border: 1px solid rgba(22, 163, 74, 0.3) !important;
+  border-radius: var(--radius, 6px) !important;
+  padding: 14px !important;
+  color: #15803d !important;
+  font-size: 14px !important;
+  font-family: var(--ff-body, 'Manrope', sans-serif) !important;
+}
+
+#forma-tz .forminator-error-message,
+#forma-tz .forminator-field--error input,
+#forma-tz .forminator-field--error textarea {
+  border-color: #ef4444 !important;
+}
+#forma-tz .forminator-field--error .forminator-error-message {
+  font-size: 11px !important;
+  color: #ef4444 !important;
+  margin-top: 3px !important;
+}
+
+
+/* ══════════════════════════════════════════
+   "АБО ЗАТЕЛЕФОНУЙТЕ" — повернути на місце
+══════════════════════════════════════════ */
+.form-note {
+  font-family: var(--ff-body, 'Manrope', sans-serif) !important;
+  font-size: 13px !important;
+  color: var(--c-muted, #6b7280) !important;
+  margin: 12px 0 0 0 !important;
+  text-align: left !important;
+  display: block !important;
+}
+.form-note a {
+  color: var(--c-accent, #16a34a) !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+}
+.form-note a:hover {
+  text-decoration: underline !important;
+}
+
+/* Якщо .form-note стоїть після .forminator-custom-form */
+.tz-form-wrap > .form-note {
+  margin-top: 10px !important;
+}
+
+
+/* ══════════════════════════════════════════
+   АДАПТИВ — мобільний
+══════════════════════════════════════════ */
+/* Гарантируем 2 колонки на экранах > 900px */
+@media (min-width: 900px) {
+  #forma-tz .tz-form-grid {
+    display: grid !important;
+    grid-template-columns: 1.1fr 1fr !important; /* форма чуть уже текста для баланса */
+    gap: 48px;
+    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+/* Адаптив: на планшетах и мобильных строго 1 колонка */
+@media (max-width: 899px) {
+  #forma-tz .tz-form-grid {
+    display: block !important;
+  }
+  #forma-tz .form-info { margin-bottom: 32px; }
+  #forma-tz .tz-form-wrap { width: 100%; }
+}
+/* ============================================================
+   FORMINATOR — точкові правки відступів
+   Додати В КІНЕЦЬ наявного CSS у WordPress → Зовнішній вигляд → Додатковий CSS
+============================================================ */
+ 
+/* 1. Прибрати великий відступ ЗВЕРХУ блоку форми
+      (section-alt вже має padding 64px, Forminator додає ще свій) */
+#forma-tz .forminator-custom-form {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+ 
+/* 2. Відступ між лейблом і лічильником 0/1000 — стиснути */
+#forma-tz .forminator-field-textarea .forminator-label {
+  margin-bottom: 4px !important;
+}
+#forma-tz .forminator-field--limit_count {
+  margin-top: 2px !important;
+  margin-bottom: 4px !important;
+  line-height: 1 !important;
+}
+ 
+/* 3. Прибрати зайвий простір між лейблом і полем у всіх рядах */
+#forma-tz .forminator-row {
+  margin-bottom: 10px !important;
+}
+#forma-tz .forminator-field {
+  margin-bottom: 0 !important;
+}
+ 
+/* 4. "Або зателефонуйте" — прив'язати до низу форми, не дати виїхати */
+.tz-form-wrap {
+  display: flex !important;
+  flex-direction: column !important;
+}
+.tz-form-wrap .form-note {
+  margin-top: 10px !important;
+  flex-shrink: 0 !important;
+}
+ 
+/* 5. Сам блок .section-alt#forma-tz — зменшити padding зверху якщо треба */
+.tz-section-wrap.section-alt {
+  padding-top: 48px !important;
+  padding-bottom: 48px !important;
+}
+ 
+/* 6. Кнопка submit — відступ зверху зменшити */
+#forma-tz .forminator-row--submit {
+  margin-top: 6px !important;
+}
