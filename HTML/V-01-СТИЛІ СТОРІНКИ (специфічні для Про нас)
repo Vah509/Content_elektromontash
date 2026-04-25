@@ -1,0 +1,147 @@
+<!-- ═══════════════════════════════════════
+     СТИЛІ СТОРІНКИ (специфічні для Про нас)
+════════════════════════════════════════ -->
+<style>
+  /* Таблиця фактів */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+  .about-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .about-table tr {
+    border-bottom: 1px solid var(--c-divider);
+  }
+  .about-table tr:last-child {
+    border-bottom: none;
+  }
+  .about-table-label {
+    padding: 13px 0;
+    color: var(--c-muted);
+    font-size: 14px;
+    width: 45%;
+    vertical-align: top;
+  }
+  .about-table-value {
+    padding: 13px 0;
+    font-weight: 600;
+    color: var(--c-head);
+    font-size: 15px;
+  }
+  .about-phone {
+    color: var(--c-accent);
+    text-decoration: none;
+    font-weight: 700;
+    transition: color var(--transition);
+  }
+  .about-phone:hover {
+    color: var(--c-accent-hover);
+  }
+
+  /* Заглушка фото */
+  .about-photo-placeholder {
+    background: var(--c-bg2);
+    border: 2px dashed var(--c-accent-border);
+    border-radius: var(--radius);
+    aspect-ratio: 4/3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--c-muted);
+    font-size: 14px;
+    text-align: center;
+    padding: 24px;
+  }
+  .about-photo-placeholder svg {
+    width: 48px;
+    height: 48px;
+    fill: var(--c-accent);
+    opacity: 0.2;
+  }
+  .about-photo-hint {
+    font-size: 12px;
+    color: var(--c-accent);
+  }
+
+  /* Текст спеціалізації */
+  .about-text {
+    font-size: 16px;
+    color: var(--c-text);
+    line-height: 1.7;
+    max-width: 780px;
+    margin-bottom: 14px;
+  }
+  .about-text:last-child {
+    margin-bottom: 0;
+  }
+
+  /* 4 картки принципів */
+  .principles-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .principle-card {
+    background: var(--c-bg2);
+    border: 1px solid var(--c-accent-border);
+    border-radius: var(--radius);
+    padding: 28px;
+    transition: border-color var(--transition), box-shadow var(--transition);
+  }
+  .principle-card:hover {
+    border-color: var(--c-accent);
+    box-shadow: var(--shadow-card);
+  }
+  .principle-icon {
+    font-size: 28px;
+    margin-bottom: 12px;
+    line-height: 1;
+  }
+  .principle-card h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--c-head);
+    margin-bottom: 8px;
+  }
+  .principle-card p {
+    font-size: 14px;
+    color: var(--c-muted);
+    line-height: 1.6;
+  }
+
+  /* Адаптив */
+  @media (max-width: 768px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+    }
+    .about-photo-placeholder {
+      display: none;
+    }
+    .principles-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+
+<!-- JS -->
+<script>
+  function showFileName(input) {
+    const display = document.getElementById('file-name');
+    const label = document.getElementById('file-label');
+    if (input.files && input.files[0]) {
+      display.textContent = '📎 ' + input.files[0].name;
+      display.style.display = 'block';
+      label.style.borderColor = 'var(--c-accent)';
+    }
+  }
+</script>
+
+</body>
+</html>
